@@ -7,15 +7,6 @@ pipeline{
                 }
             }
                 
-            stage('Install'){
-                steps{
-                    
-                }
-            }
-                stage('deploy'){
-                steps{
-                    
-                }
-            }
+            
         }
 }
