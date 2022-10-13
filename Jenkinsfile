@@ -1,15 +1,20 @@
 pipeline{
         agent any
         stages{
-            stage('Make Directory'){
+            stage('Clone'){
                 steps{
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/deepanshuMeteor/qa-121022.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://gitlab.com/qacdevops/chaperootodo_client.git']]])
                 }
             }
                 
-            stage('Make Files'){
+            stage('Install'){
                 steps{
-                    sh "touch ~/jenkins-tutorial-test/file1 ~/jenkins-tutorial-test/file2"
+                    
+                }
+            }
+                stage('deploy'){
+                steps{
+                    
                 }
             }
         }
